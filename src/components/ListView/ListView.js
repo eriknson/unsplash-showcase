@@ -1,10 +1,9 @@
 import React from 'react';
-import { useFetch } from './hooks';
+import { useFetch } from './FetchImage';
+import ListItem from './ListItem';
 
 function ListView() {
   const [data, loading] = useFetch('https://case.radon.works/photos.json');
-
-  console.log(data);
   return (
     <>
       <div className="listview">
@@ -17,9 +16,14 @@ function ListView() {
           'Loading...'
         ) : (
           <ul>
-            {data.map(({ id, alt_description, urls }) => (
+            {data.map(({ updated_at, user, id, alt_description, urls }) => (
               <li key={`photo-${id}`}>
-                <img alt={alt_description} src={urls.small} />
+                <ListItem
+                  src={urls.small}
+                  alt_description={alt_description}
+                  user={user.name}
+                  date={updated_at}
+                />
               </li>
             ))}
           </ul>
