@@ -1,38 +1,61 @@
+@import '~react-image-gallery/styles/css/image-gallery.css';
+
 .App {
   text-align: center;
+  color: black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.hero {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.hero img {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  left: 0;
+  top: 0;
+}
+
+.hero-text {
   color: white;
+  align-self: center;
+  position: absolute;
 }
 
-.App-link {
-  color: #61dafb;
+.description {
+  margin: auto;
+  width: 80%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.carousel {
+  margin: auto;
+  width: 80%;
+}
+
+.image-gallery-index {
+  background: transparent;
+  padding: 0;
+  color: black;
+  line-height: 1;
+  position: absolute;
+  right: 0;
+  bottom: -30px;
+  top: auto;
+  z-index: 4;
+}
+
+.image-gallery-index-current {
+  font-weight: bold;
+}
+
+.image-gallery-slide .image-gallery-image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.listview {
+  margin: auto;
+  width: 80%;
 }
