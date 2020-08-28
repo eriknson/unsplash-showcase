@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useFetch } from './FetchImage';
 import ListItem from './ListItem';
 
 function ListView() {
   const [data, loading] = useFetch('https://case.radon.works/photos.json');
+  const [count, setCount] = useState(2);
+
   return (
     <>
       <div className="listview">
@@ -16,18 +18,22 @@ function ListView() {
           'Loading...'
         ) : (
           <ul>
-            {data.map(({ updated_at, user, id, alt_description, urls }) => (
-              <li key={`photo-${id}`}>
-                <ListItem
-                  src={urls.small}
-                  alt_description={alt_description}
-                  user={user.name}
-                  date={updated_at}
-                />
-              </li>
-            ))}
+            {data
+              .slice(0, count)
+              .sort((a, b) => (a.updated_at > b.updated_at ? -1 : 1))
+              .map((i) => (
+                <li key={`photo-${i.id}`}>
+                  <ListItem
+                    src={i.urls.small}
+                    alt_description={i.alt_description}
+                    user={i.user.name}
+                    date={i.updated_at}
+                  />
+                </li>
+              ))}
           </ul>
         )}
+        <button onClick={() => setCount(count + 2)}>Load more!</button>
       </div>
     </>
   );
