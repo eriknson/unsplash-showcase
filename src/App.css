@@ -1,5 +1,9 @@
 @import '~react-image-gallery/styles/css/image-gallery.css';
 
+html {
+  scroll-behavior: smooth;
+}
+
 .App {
   text-align: center;
   color: black;
@@ -27,13 +31,13 @@
 .description {
   margin: auto;
   width: 80%;
-  max-width: 1200px;
+  max-width: 60rem;
 }
 
 .carousel {
   margin: auto;
   width: 80%;
-  max-width: 1200px;
+  max-width: 60rem;
 }
 
 .image-gallery-index {
@@ -60,7 +64,7 @@
 .listview {
   margin: auto;
   width: 80%;
-  max-width: 48rem;
+  max-width: 60rem;
 }
 
 .listview ul {
@@ -76,13 +80,37 @@
 }
 
 .listitem {
-  width: 10rem;
-  height: 15rem;
-  padding: 1rem;
+  position: relative;
+  width: 13rem;
+  height: 13rem;
+  margin: 1rem;
 }
 
 .listitem img {
-  width: 10rem;
+  width: 13rem;
   height: 10rem;
   object-fit: cover;
+}
+
+.listitem-name {
+  text-align: left;
+}
+
+.hover-text {
+  opacity: 0;
+  position: absolute;
+  width: 13rem;
+  height: 10rem;
+  top: 0;
+  left: 0;
+}
+
+.hover-text p {
+  margin-top: 35%;
+  color: black;
+}
+
+.hover-text:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.5);
 }
