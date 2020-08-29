@@ -20,12 +20,13 @@ function ListView() {
   return (
     <>
       <div id="listview" className="standard-component" ref={listviewRef}>
-        <h2>Textures & patterns</h2>
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text.
-        </p>
-
+        <div className="listview-intro">
+          <h2>Textures & patterns</h2>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text.
+          </p>
+        </div>
         <div className="listview-top-buttons-container">
           <button
             onClick={() => setSortByDate(sortLatest === false ? true : true)}
@@ -38,7 +39,6 @@ function ListView() {
             Popular
           </button>
         </div>
-
         {loading ? (
           'Loading 🥰'
         ) : (
@@ -59,8 +59,10 @@ function ListView() {
           </ul>
         )}
         <div className="listview-bottom-buttons-container">
-          <button onClick={() => setCount(count + 4)}>Load more</button>
-          <button onClick={executeScroll}>Back to top</button>
+          <button onClick={() => setCount(count + 4)}>Load more images</button>
+          <button id="back-to-top-button" onClick={executeScroll}>
+            Back to top
+          </button>
         </div>
       </div>
     </>

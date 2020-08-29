@@ -17,19 +17,35 @@ a {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 4.5em;
   font-weight: 800;
+}
+
+h2 {
+  width: 70%;
+  font-size: 2.7em;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin: auto;
+}
+
+p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 36px;
 }
 
 .standard-component {
   margin: auto;
   width: 80%;
   max-width: 60rem;
+  padding: 5em 0 5em 0;
 }
 
 #hero {
   display: flex;
   justify-content: center;
+  margin-bottom: 3em;
 }
 
 #hero a {
@@ -53,6 +69,10 @@ h1 {
   color: white;
   align-self: center;
   position: absolute;
+}
+
+#description {
+  width: 70%;
 }
 
 .image-gallery-index {
@@ -103,6 +123,68 @@ h1 {
 
 .listitem-name {
   text-align: left;
+  color: black;
+  font-weight: 700;
+  font-size: 12px;
+  margin-top: 0px;
+}
+
+.listitem-name:hover {
+  text-decoration: underline;
+}
+
+.listview-bottom-buttons-container {
+  padding-top: 3em;
+  width: 200px;
+  margin: auto;
+}
+.listview-top-buttons-container {
+  width: 400px;
+  text-align: left;
+  margin-left: 1rem;
+}
+
+.listview-top-buttons-container button {
+  font-size: 9px;
+  letter-spacing: 2px;
+  font-family: 'Open Sans';
+  text-transform: uppercase;
+  font-weight: 800;
+  background: none !important;
+  border: none;
+
+  border-bottom: 2px solid black;
+  padding: 0 0 2px 0;
+  color: black;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  margin-right: 2em;
+}
+
+.listview-bottom-buttons-container button {
+  font-size: 9px;
+  letter-spacing: 2px;
+  font-family: 'Open Sans';
+  text-transform: uppercase;
+  font-weight: 800;
+  background-color: transparent;
+  color: black;
+  border-radius: 0px;
+  border: 2px solid black;
+  width: 200px;
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  transition-duration: 0.4s;
+}
+
+#back-to-top-button {
+  border: 2px solid transparent;
+}
+
+.listview-bottom-buttons-container button:hover {
+  background-color: black;
+  letter-spacing: 2.5px;
+  color: white;
+  cursor: pointer;
 }
 
 .hover-text {
@@ -117,6 +199,10 @@ h1 {
 .hover-text p {
   margin-top: 35%;
   color: black;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 16;
+  letter-spacing: 3px;
 }
 
 .hover-text:hover {
@@ -137,6 +223,11 @@ h1 {
 }
 
 @media (max-width: 700px) {
+  .standard-component {
+    width: 80%;
+    padding: 3em 0 3em 0;
+  }
+
   #hero {
     height: 600px;
   }
@@ -150,11 +241,75 @@ h1 {
     margin-bottom: 0.1em;
   }
 
+  h2 {
+    width: 100%;
+    font-size: 1.8em;
+    font-weight: 800;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+  }
+
   .hero-text {
     padding-bottom: 1em;
   }
 
   #hero a {
     font-size: 0.5em;
+  }
+
+  #carousel {
+    width: 100%;
+  }
+
+  .image-gallery-icon,
+  .image-gallery-right-nav {
+    display: none;
+  }
+
+  .image-gallery-index {
+    width: 100%;
+  }
+
+  #listview {
+    width: 90%;
+  }
+
+  .listview-intro {
+    padding-bottom: 2.5em;
+    width: 90%;
+    margin: auto;
+  }
+
+  #listview ul {
+    padding-top: 2em;
+  }
+
+  .listitem {
+    width: 100%;
+    height: 17em;
+    margin: 0;
+  }
+
+  .listitem img {
+    width: 100%;
+    height: 13em;
+  }
+
+  .hover-text {
+    width: 100%;
+    height: 13em;
+  }
+
+  .hover-text p {
+    margin-top: 25%;
+  }
+
+  .listitem-name {
+    margin-block-start: 0.2em;
+    margin-block-end: 0.2em;
   }
 }
