@@ -27,11 +27,13 @@
 .description {
   margin: auto;
   width: 80%;
+  max-width: 1200px;
 }
 
 .carousel {
   margin: auto;
   width: 80%;
+  max-width: 1200px;
 }
 
 .image-gallery-index {
@@ -58,4 +60,29 @@
 .listview {
   margin: auto;
   width: 80%;
+  max-width: 48rem;
+}
+
+.listview ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  margin: 0;
+  padding: 0;
+}
+
+.listitem {
+  width: 10rem;
+  height: 15rem;
+  padding: 1rem;
+}
+
+.listitem img {
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
 }

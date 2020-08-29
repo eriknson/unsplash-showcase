@@ -6,6 +6,9 @@ function ListItem(props) {
       <img src={props.src} alt={props.alt_description} />
       <p>{props.user}</p>
       <p>{props.date}</p>
+      <p>
+        <strong>{props.likes}</strong>
+      </p>
     </div>
   );
 }
