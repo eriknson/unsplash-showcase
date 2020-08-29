@@ -22,7 +22,7 @@ function Carousel() {
 
   return (
     <>
-      <div className="carousel">
+      <div id="carousel" className="standard-component">
         <h2>Carousel</h2>
         <div className="carousel-container">
           <ImageGallery

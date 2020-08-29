@@ -3,7 +3,7 @@ import React from 'react';
 function Description() {
   return (
     <>
-      <div className="description">
+      <div id="description" className="standard-component">
         <h2>Lorem ipsum dolor sit amet</h2>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting

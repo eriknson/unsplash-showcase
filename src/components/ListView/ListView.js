@@ -19,8 +19,8 @@ function ListView() {
 
   return (
     <>
-      <div className="listview" ref={listviewRef}>
-        <h1>Textures & patterns</h1>
+      <div id="listview" className="standard-component" ref={listviewRef}>
+        <h2>Textures & patterns</h2>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text.

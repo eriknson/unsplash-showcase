@@ -3,7 +3,7 @@ import React from 'react';
 function Hero() {
   return (
     <>
-      <div className="hero">
+      <div id="hero">
         <img
           src={require('../../assets/hero_background.jpg')}
           alt="The hero background texture."
@@ -11,7 +11,7 @@ function Hero() {
         <div className="hero-text">
           <h1>Texture & Patterns</h1>
           <span>
-            <a href="www.google.se">See all images</a>
+            <a href="#listview">See all images</a>
           </span>
         </div>
       </div>

@@ -1,4 +1,5 @@
 @import '~react-image-gallery/styles/css/image-gallery.css';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 
 html {
   scroll-behavior: smooth;
@@ -6,15 +7,41 @@ html {
 
 .App {
   text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #fff1e6;
   color: black;
 }
 
-.hero {
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: 800;
+}
+
+.standard-component {
+  margin: auto;
+  width: 80%;
+  max-width: 60rem;
+}
+
+#hero {
   display: flex;
   justify-content: center;
 }
 
-.hero img {
+#hero a {
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 16;
+  text-decoration: underline;
+  letter-spacing: 3px;
+}
+
+#hero img {
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -26,18 +53,6 @@ html {
   color: white;
   align-self: center;
   position: absolute;
-}
-
-.description {
-  margin: auto;
-  width: 80%;
-  max-width: 60rem;
-}
-
-.carousel {
-  margin: auto;
-  width: 80%;
-  max-width: 60rem;
 }
 
 .image-gallery-index {
@@ -61,13 +76,7 @@ html {
   object-fit: cover;
 }
 
-.listview {
-  margin: auto;
-  width: 80%;
-  max-width: 60rem;
-}
-
-.listview ul {
+#listview ul {
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -113,4 +122,39 @@ html {
 .hover-text:hover {
   opacity: 1;
   background-color: rgba(255, 255, 255, 0.5);
+}
+
+.footer {
+  color: white;
+  background-color: black;
+  height: 20rem;
+}
+
+.footer h3 {
+  position: absolute;
+  width: 100%;
+  margin-top: 9rem;
+}
+
+@media (max-width: 700px) {
+  #hero {
+    height: 600px;
+  }
+
+  #hero img {
+    object-fit: cover;
+  }
+
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.1em;
+  }
+
+  .hero-text {
+    padding-bottom: 1em;
+  }
+
+  #hero a {
+    font-size: 0.5em;
+  }
 }
