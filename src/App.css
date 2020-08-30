@@ -1,7 +1,9 @@
 @import '~react-image-gallery/styles/css/image-gallery.css';
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 
-html {
+html,
+body {
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -10,6 +12,9 @@ html {
   font-family: 'Open Sans', sans-serif;
   background-color: #fff1e6;
   color: black;
+  position: relative;
+  margin: auto;
+  width: 100%;
 }
 
 a {
@@ -256,6 +261,10 @@ p {
 
   #hero img {
     object-fit: cover;
+  }
+
+  #description {
+    width: 80%;
   }
 
   h1 {
