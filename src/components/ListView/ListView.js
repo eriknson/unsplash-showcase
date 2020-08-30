@@ -17,6 +17,9 @@ function ListView() {
     data.sort((a, b) => (a.likes > b.likes ? -1 : 1));
   }
 
+  let latest_btn_class = sortLatest ? 'activeButton' : 'inactiveButton';
+  let popular_btn_class = sortLatest ? 'inactiveButton' : 'activeButton';
+
   return (
     <>
       <div id="listview" className="standard-component" ref={listviewRef}>
@@ -29,11 +32,13 @@ function ListView() {
         </div>
         <div className="listview-top-buttons-container">
           <button
+            className={latest_btn_class}
             onClick={() => setSortByDate(sortLatest === false ? true : true)}
           >
             Latest
           </button>
           <button
+            className={popular_btn_class}
             onClick={() => setSortByDate(sortLatest === true ? false : false)}
           >
             Popular
