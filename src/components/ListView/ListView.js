@@ -44,7 +44,7 @@ function ListView() {
         ) : (
           <ul>
             {data.slice(0, count).map((i) => (
-              <li key={`photo-${i.id}`}>
+              <li className="listitem-container" key={`photo-${i.id}`}>
                 <ListItem
                   src={i.urls.small}
                   alt_description={i.alt_description}

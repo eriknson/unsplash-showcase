@@ -72,7 +72,11 @@ p {
 }
 
 #description {
-  width: 70%;
+  width: 60%;
+}
+
+.image-gallery-icon:hover {
+  color: #fff1e6;
 }
 
 .image-gallery-index {
@@ -96,28 +100,39 @@ p {
   object-fit: cover;
 }
 
+.listview-intro {
+  width: 80%;
+  margin: auto;
+  padding-bottom: 2.5em;
+}
+
 #listview ul {
   list-style: none;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   align-content: flex-start;
   margin: 0;
   padding: 0;
 }
 
+.listitem-container {
+  width: 22%;
+  padding: 3% 3% 0 0;
+  height: 180px;
+}
+
 .listitem {
   position: relative;
-  width: 13rem;
-  height: 13rem;
-  margin: 1rem;
+  width: 100%;
+  height: 80%;
 }
 
 .listitem img {
-  width: 13rem;
-  height: 10rem;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -141,7 +156,6 @@ p {
 .listview-top-buttons-container {
   width: 400px;
   text-align: left;
-  margin-left: 1rem;
 }
 
 .listview-top-buttons-container button {
@@ -190,18 +204,18 @@ p {
 .hover-text {
   opacity: 0;
   position: absolute;
-  width: 13rem;
-  height: 10rem;
+  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
 }
 
 .hover-text p {
-  margin-top: 35%;
+  margin-top: 25%;
   color: black;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 16;
+  font-size: 10px;
   letter-spacing: 3px;
 }
 
@@ -220,6 +234,14 @@ p {
   position: absolute;
   width: 100%;
   margin-top: 9rem;
+}
+
+@media (max-width: 900px) {
+  .listitem-container {
+    width: 47%;
+    padding: 3% 3% 0 0;
+    height: 250px;
+  }
 }
 
 @media (max-width: 700px) {
@@ -280,7 +302,7 @@ p {
 
   .listview-intro {
     padding-bottom: 2.5em;
-    width: 90%;
+    width: 80%;
     margin: auto;
   }
 
@@ -289,19 +311,7 @@ p {
   }
 
   .listitem {
-    width: 100%;
-    height: 17em;
     margin: 0;
-  }
-
-  .listitem img {
-    width: 100%;
-    height: 13em;
-  }
-
-  .hover-text {
-    width: 100%;
-    height: 13em;
   }
 
   .hover-text p {
@@ -311,5 +321,13 @@ p {
   .listitem-name {
     margin-block-start: 0.2em;
     margin-block-end: 0.2em;
+  }
+}
+
+@media (max-width: 650px) {
+  .listitem-container {
+    width: 97%;
+    padding: 3% 3% 0 0;
+    height: 350px;
   }
 }
