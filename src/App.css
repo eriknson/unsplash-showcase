@@ -227,10 +227,15 @@ p {
   height: 100%;
   top: 0;
   left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0);
+  transition-duration: 0.4s;
 }
 
 .hover-text p {
-  margin-top: 25%;
+  margin: auto;
   color: black;
   text-transform: uppercase;
   font-weight: bold;
@@ -240,7 +245,7 @@ p {
 
 .hover-text:hover {
   opacity: 1;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .footer {
@@ -323,6 +328,11 @@ p {
     width: 90%;
   }
 
+  .listview-top-buttons-container {
+    width: auto;
+    text-align: center;
+  }
+
   .listview-intro {
     padding-bottom: 2.5em;
     width: 80%;
@@ -335,10 +345,6 @@ p {
 
   .listitem {
     margin: 0;
-  }
-
-  .hover-text p {
-    margin-top: 25%;
   }
 
   .listitem-name {

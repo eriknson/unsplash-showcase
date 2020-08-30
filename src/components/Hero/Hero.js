@@ -9,7 +9,7 @@ function Hero() {
           alt="The hero background texture."
         />
         <div className="hero-text">
-          <h1>Texture & Patterns</h1>
+          <h1>Textures & Patterns</h1>
           <span>
             <a href="#listview">See all images</a>
           </span>
