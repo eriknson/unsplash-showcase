@@ -56,10 +56,18 @@ p {
 #hero a {
   color: white;
   text-transform: uppercase;
-  font-weight: bold;
-  font-size: 16;
-  text-decoration: underline;
+  font-weight: 700;
+  font-size: 16px;
+  border-bottom: 2px solid white;
+  padding: 0 0 2px 0;
   letter-spacing: 3px;
+  transition-duration: 0.4s;
+}
+
+#hero a:hover {
+  background-color: white;
+  color: black;
+  padding: 8px;
 }
 
 #hero img {
@@ -141,12 +149,14 @@ p {
   object-fit: cover;
 }
 
-.listitem-name {
+.listitem p {
   text-align: left;
   color: black;
   font-weight: 700;
   font-size: 12px;
   margin-top: 0px;
+  width: fit-content;
+  transition-duration: 0.4s;
 }
 
 .listitem-name:hover {
@@ -169,15 +179,19 @@ p {
   font-family: 'Open Sans';
   text-transform: uppercase;
   font-weight: 800;
-  background: none !important;
+  background: transparent;
   border: none;
-
   border-bottom: 2px solid black;
   padding: 0 0 2px 0;
   color: black;
   cursor: pointer;
   transition-duration: 0.4s;
   margin-right: 2em;
+}
+
+.listview-top-buttons-container button:hover {
+  background-color: black;
+  color: white;
 }
 
 .listview-bottom-buttons-container button {
