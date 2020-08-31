@@ -7,6 +7,10 @@ body {
   scroll-behavior: smooth;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .App {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
@@ -196,11 +200,6 @@ p {
 .inactiveButton {
   border: none;
   border-bottom: 2px solid transparent;
-}
-
-.listview-top-buttons-container button:hover {
-  background-color: black;
-  color: white;
 }
 
 .listview-bottom-buttons-container button {

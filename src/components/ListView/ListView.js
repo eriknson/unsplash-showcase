@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { useFetch } from './FetchImage';
+import { useFetch } from '../../hooks/useFetch';
 import ListItem from './ListItem';
 
 function ListView() {
